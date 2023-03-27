@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1{
+    margin-top: 50px;
+    font-size: 3rem;
+    text-align: center;
+    color: #6c63ff;
+}
+
+.instructions {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #67667e;
+}
+  
+
+.game-container{
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 900px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.figure-container{
+    fill: transparent;
+    stroke: #6c63ff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.figure-part{
+    display: none;
+}
+
+.wrong-letters-container{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.wrong-letters-container p{
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+    color: #6c63ff;
+}
+
+.wrong-letters-container span{
+    font-size: 2rem;
+    color: #6c63ff;
+}
+
+.word{
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.letter{
+    border-bottom: 3px solid #6c63ff;
+    display: inline-flex;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+.popup-container{
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup h2 {
+    font-size: 2rem;
+    margin: 0 0 20px;
+    color: #6c63ff;
+}
+
+.popup button{
+    cursor: pointer;
+    background-color: #6c63ff;
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.popup button:hover {
+    background-color: #5b53cf;
+}
+
+.popup button:active{
+    transform: scale(0.98);
+}
+
+.popup button:focus{
+    outline: 0;
+}
+
+.notification-container{
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification-container p{
+    margin: 0;
+}
+
+.notification-container.show{
+    transform: translateY(-50px);
+}
